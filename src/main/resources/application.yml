@@ -1,0 +1,37 @@
+management:
+  info:
+    java:
+      enabled: true
+    os:
+      enabled: true
+    env:
+      enabled: true
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /monitor
+
+info:
+  app:
+    name: hello-actuator
+    company: yh
+
+logging:
+  level:
+    actuator.controller: debug
+
+server:
+  tomcat:
+    mbeanregistry:
+      enabled: true
